@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: 'Roboto', Arial;
+    margin-top: 10em;
+}
+
+.form {
+    min-width: 300px;
+    max-width: 50vw;
+    border: 2px solid white;
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    margin-left: 25%;
+}
+
+.fuller-button {
+    position: relative;
+    color: white;
+    background: none;
+    border-radius: 0;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    letter-spacing: 0.35em;
+    font-size: 0.7em;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, transform 0.3s, letter-spacing 0.1s;
+    margin: 1em;
+    text-align: center;
+    min-width: 75%;
+    max-width: 600px;
+    cursor: pointer;
+}
+.fuller-button:hover {
+    transform: scale(1.05);
+}
+.fuller-button .button-text {
+    position: absolute;
+    transition: width 0.3s;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-top: 6px;
+}
+.fuller-button .button-text.dotted {
+    font-size: 6pt;
+    padding-top: 7px;
+}
+.fuller-button.small {
+    min-width: 50px;
+    max-width: 50px;
+    letter-spacing: 0.2em;
+}
+.fuller-button.active {
+    padding-left: 10px;
+    letter-spacing: 0.1em;
+    overflow: hidden;
+}
+.fuller-button.active .button-text {
+    transition: all 0.3s;
+    width: 7em;
+}
+.fuller-button.active input {
+    transition: left 0.3s, width 0.3s;
+    visibility: visible;
+    left: 7em;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding-left: 0.4em !important;
+    outline: none;
+}
+.fuller-button.blue {
+    box-shadow: inset 0 0 1em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+    border: #00DD9F solid 2px;
+}
+.fuller-button.blue:hover {
+    box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5), 0 0 1.5em rgba(0, 170, 170, 0.7);
+}
+.fuller-button.red {
+    box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
+    border: #fb5454 solid 2px;
+}
+.fuller-button.red:hover {
+    background-color: #fb5454;
+    box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
+}
+.fuller-button.white {
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+    border: #fff solid 2px;
+}
+.fuller-button.white:hover {
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #fff;
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.5);
+}
+.fuller-button input {
+    transition: left 0.3s, width 0.3s;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 600px) {
+    .form {
+        margin-left: 1%;
+        min-width: 99%;
+    }
+}
